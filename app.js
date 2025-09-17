@@ -16,7 +16,7 @@ import sanitizeHtmlMiddleware from "./utils/sanitizeHTML.js";
 import hpp from "hpp";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-
+ 
 /*global process, a*/
 const app = express();
 
@@ -95,3 +95,4 @@ app.all("/{*any}", (req, res, next) => {
 });
 app.use(globalErrorHandler);
 export default app;
+
