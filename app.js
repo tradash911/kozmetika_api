@@ -43,13 +43,13 @@ dotenv.config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: [
+    /*  origin: [
       "http://localhost:5173",
       "http://localhost:5174",
       "https://singular-fenglisu-30dc7d.netlify.app/",
-      "https://kozmetika-api.onrender.com"
-    ],
-    /* origin: process.env.FRONTEND_URL, */
+      "https://kozmetika-api.onrender.com",
+    ], */
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
@@ -95,4 +95,3 @@ app.all("/{*any}", (req, res, next) => {
 });
 app.use(globalErrorHandler);
 export default app;
-
