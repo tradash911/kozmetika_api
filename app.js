@@ -51,7 +51,7 @@ app.use(
       "https://kegyeletbolt.hu"
     ], */
     origin: process.env.FRONTEND_URL,
-    credentials: true,
+    credentials: false,
    methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type","Authorization"]
   })
@@ -98,6 +98,7 @@ app.all("/{*any}", (req, res, next) => {
 });
 app.use(globalErrorHandler);
 export default app;
+
 
 
 
