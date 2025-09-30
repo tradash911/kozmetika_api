@@ -48,6 +48,7 @@ app.use(
       "http://localhost:5174",
       "https://singular-fenglisu-30dc7d.netlify.app/",
       "https://kozmetika-api.onrender.com",
+      "https://kegyeletbolt.hu/"
     ], */
     origin: process.env.FRONTEND_URL,
     credentials: true,
@@ -95,4 +96,5 @@ app.all("/{*any}", (req, res, next) => {
 });
 app.use(globalErrorHandler);
 export default app;
+
 
